@@ -1,0 +1,19 @@
+bit 1	 of C is=10000000saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ gcc shift.c -o shift
+saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ ./shift
+
+ bit 2	 of C is=00000000saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ gcc shift.c -o shift
+saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ ./shift
+
+ bit 3	 of C is=00000000saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ gcc shift.c -o shift
+saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ ./shift
+
+ bit 4	 of C is=00000000saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ gcc shift.c -o shift
+saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ ./shift
+
+ bit 5	 of C is=00000000saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ gcc shift.c -o shift
+saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ ./shift
+
+ bit 6	 of C is=10000000saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ gcc shift.c -o shift
+saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ ./shift
+
+ bit 7	 of C is=00000000saswat@saswat-HP-ProBook-440-G3:~/Dark-Knight-master$ 
