@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 unsigned char get_nth_bit(unsigned char byte,unsigned int n);
-void print_bits (char byte);
-void toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval);
+void print_bits (unsigned char byte);
+unsigned char toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval);
+unsigned char c='C';
 
-
-void print_bits(char byte)
+void print_bits(unsigned char byte)
 {
 	for(int i=0;i<=7;++i)
-	{   //Doubtful how this works
+	{   
 		printf("%c",(byte &(1<<i)) ? '1':'0');
 	}
 }
@@ -21,26 +21,45 @@ unsigned char get_nth_bit(unsigned char byte,unsigned int n)
 }
 
 
-void toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval)
+unsigned char toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval)
 {   
     //setting a bit
     if(bitval)
-    {
-        byte=byte^(1<<n);
-        printf("\nSet bit %d\t",n);
+    {   
+        unsigned char y=1<<n;
+        printf("\nSet bit %d ",n);
         print_bits(byte);
-        //return byte;
+        printf(" ^ ");
+        print_bits(y);
+        byte=byte ^ y;
+        printf(" = ");
+        print_bits(byte);
+        printf("\n");
+        return byte;
+       
+
+        
     }
     
     //clearing a bit
     else
-    {
-        byte=byte & (~(1 << n));
-        printf("\nCleared bit %d\t",n);
+    {   
+
+        unsigned char x=~1<<n;
+        printf("\nCleared bit %d ",n);
         print_bits(byte);
-        //return byte; 
+        printf(" & ");
+        print_bits(x);
+        byte=byte & x; 
+        
+        printf(" = ");
+        print_bits(byte);
+        printf("\n");
+       
+        return byte;   
+         
     }
-     //return byte;
+     
 } 
 
 int main()
@@ -69,7 +88,7 @@ int main()
     //print_bits(c);
     //unsigned char bit=get_nth_bit(c,n);
     //swapping bits
-    unsigned char c='C';
+    
     printf("\n In main before setting or clearing c=");
     print_bits(c);
 
@@ -93,14 +112,15 @@ int main()
     //printf("\nAfter permuting bits");
     //print_bits(c);
 
-    toggle_nth_bit(c,0,0);
-    toggle_nth_bit(c,1,1);
-    toggle_nth_bit(c,2,0);
-    toggle_nth_bit(c,3,0);
-    toggle_nth_bit(c,4,0);
-    toggle_nth_bit(c,5,0);
-    toggle_nth_bit(c,6,1);
-    toggle_nth_bit(c,7,1);
-
+    c=toggle_nth_bit(c,0,0);
+    c=toggle_nth_bit(c,1,1);
+    c=toggle_nth_bit(c,2,0);
+    c=toggle_nth_bit(c,3,0);
+    c=toggle_nth_bit(c,4,0);
+    c=toggle_nth_bit(c,5,0);
+    c=toggle_nth_bit(c,6,1);
+    c=toggle_nth_bit(c,7,1);
+    printf("\n");
+    print_bits(c);
     return 0;
 }

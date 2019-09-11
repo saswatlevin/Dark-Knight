@@ -22,10 +22,10 @@ int main()
 	  printf("\nEnter n (-1 to exit)");
 	  scanf("%d",&n);
 	  c=~(1<<n);
-	  printf("\n 1<<n=");
+	  printf("\n ~1<<n=");
 	  print_bits(c);
 	  d=1<<n;
-	  printf("\n 1>>n=");
+	  printf("\n 1<<n=");
 	  print_bits(d);
 
     }while(n!=-1);
