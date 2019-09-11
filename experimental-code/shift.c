@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned char get_nth_bit(unsigned char byte,unsigned int n);
+unsigned char get_nth_bit(unsigned char byte,unsigned char n);
 void print_bits (unsigned char byte);
-unsigned char toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval);
+unsigned char toggle_nth_bit(unsigned char byte,unsigned char n,unsigned char bitval);
 unsigned char c='C';
 
 void print_bits(unsigned char byte)
@@ -14,18 +14,20 @@ void print_bits(unsigned char byte)
 	}
 }
 
-unsigned char get_nth_bit(unsigned char byte,unsigned int n)
+unsigned char get_nth_bit(unsigned char byte,unsigned char n)
 {
     unsigned char bitStatus=(byte>>n)&1;
     return bitStatus;
 }
 
 
-unsigned char toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval)
+unsigned char toggle_nth_bit(unsigned char byte,unsigned char n,unsigned char bitval)
 {   
     //setting a bit
     if(bitval)
     {   
+        unsigned char a=get_nth_bit(byte,n);
+        if(!a){
         unsigned char y=1<<n;
         printf("\nSet bit %d ",n);
         print_bits(byte);
@@ -36,16 +38,16 @@ unsigned char toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitv
         print_bits(byte);
         printf("\n");
         return byte;
-       
+       }
 
-        
+     return byte;   
     }
     
     //clearing a bit
     else
     {   
-
-        unsigned char x=~1<<n;
+        
+        unsigned char x=~(1<<n);
         printf("\nCleared bit %d ",n);
         print_bits(byte);
         printf(" & ");
