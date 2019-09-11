@@ -94,7 +94,7 @@ int main()
     printf("\n In main before setting or clearing c=");
     print_bits(c);
 
-    unsigned int arr[8]={7,6,5,4,3,2,1,0};
+    
     
     
     /*for(int i=0;i<8;++i)
@@ -114,15 +114,25 @@ int main()
     //printf("\nAfter permuting bits");
     //print_bits(c);
 
-    c=toggle_nth_bit(c,0,0);
+    /*c=toggle_nth_bit(c,0,0);
     c=toggle_nth_bit(c,1,0);
     c=toggle_nth_bit(c,2,1);
     c=toggle_nth_bit(c,3,0);
     c=toggle_nth_bit(c,4,0);
     c=toggle_nth_bit(c,5,0);
     c=toggle_nth_bit(c,6,1);
-    c=toggle_nth_bit(c,7,1);
+    c=toggle_nth_bit(c,7,1);*/
+    
+    unsigned char arr[8]={7,6,5,4,3,2,1,0};
+    unsigned char temp=c;
+    for(int i=0;i<8;++i){
+    unsigned char arr_val=arr[i];    
+    unsigned char a=get_nth_bit(temp,arr_val); 
+    //printf("\n arr_val= %d\t a = %d\t i = %d\t",arr_val,a,i);
+   
+    c=toggle_nth_bit(c,i,a);
+    }
     printf("\n");
-    print_bits(c);
+    //print_bits(c);
     return 0;
 }
