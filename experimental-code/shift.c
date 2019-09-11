@@ -115,8 +115,8 @@ int main()
     //print_bits(c);
 
     c=toggle_nth_bit(c,0,0);
-    c=toggle_nth_bit(c,1,1);
-    c=toggle_nth_bit(c,2,0);
+    c=toggle_nth_bit(c,1,0);
+    c=toggle_nth_bit(c,2,1);
     c=toggle_nth_bit(c,3,0);
     c=toggle_nth_bit(c,4,0);
     c=toggle_nth_bit(c,5,0);
