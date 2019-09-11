@@ -123,7 +123,7 @@ int main()
     c=toggle_nth_bit(c,6,1);
     c=toggle_nth_bit(c,7,1);*/
     
-    unsigned char arr[8]={7,6,5,4,3,2,1,0};
+    unsigned char arr[8]={5,7,1,3,4,2,0,6};
     unsigned char temp=c;
     for(int i=0;i<8;++i){
     unsigned char arr_val=arr[i];    
