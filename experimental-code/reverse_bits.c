@@ -1,43 +1,93 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned char get_nth_bit(unsigned char byte,unsigned int n);
-void print_bits (char byte);
-void toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval);
+unsigned char get_nth_bit(unsigned char byte,unsigned char n);
+void print_bits (unsigned char byte);
+unsigned char toggle_nth_bit(unsigned char byte,unsigned char n,unsigned char bitval);
 
 
-void print_bits(char byte)
+void print_bits(unsigned char byte)
 {
-	for(int i=0;i<=7;++i)
-	{   //Doubtful how this works
-		printf("%c",(byte &(1<<i)) ? '1':'0');
-	}
+    for(unsigned char i=0;i<=7;++i)
+    {   
+        printf("%c",(byte &(1<<i)) ? '1':'0');
+    }
 }
 
-unsigned char get_nth_bit(unsigned char byte,unsigned int n)
+unsigned char get_nth_bit(unsigned char byte,unsigned char n)
 {
     unsigned char bitStatus=(byte>>n)&1;
+
     return bitStatus;
 }
 
 
-void toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval)
+unsigned char toggle_nth_bit(unsigned char byte,unsigned char n,unsigned char bitval)
 {   
     //setting a bit
+    unsigned char a;
     if(bitval)
-    {
-        byte=byte^(1<<n);
-        printf("\nSet bit %d\t",n);
+    {  
+        unsigned char t=byte;
+        
+        //printf("\n n= %d\n",n);
+        unsigned char y=1<<n;
+        //printf("y=");
+        //print_bits(y);
+        //printf("^");
+        
+        //print_bits(t);
+        //printf("=");
+        a=y^t;
+        //print_bits(a);
+        unsigned char g=get_nth_bit(a,n);
+        //printf("\n g= %d ",g);
+        //printf("\n");
+
+       
+        if(g!=0)
+        {    
+        printf("\nSet bit %d ",n);
         print_bits(byte);
         
+        printf(" ^ ");
+        print_bits(y);
+        byte=byte ^ y;
+        
+        printf(" = ");
+        print_bits(byte);
+
+        printf("\n");
+       return byte;
+       }
+       //else
+       //{
+          //;//printf("\n a=%d\t",a);
+       //}
+
+     return byte;   
     }
     
     //clearing a bit
     else
-    {
-        byte=byte & (~(1 << n));
-        printf("\nCleared bit %d\t",n);
+    {   
+       //printf("\n a in else");
+       //print_bits(a);
+       //printf("\n bitval in else");
+       //print_bits(bitval);
+        unsigned char x=~(1<<n);
+        printf("\nCleared bit %d ",n);
+        
         print_bits(byte);
+        printf(" & ");
+        print_bits(x);
+        byte=byte & x; 
+        
+        printf(" = ");
+        print_bits(byte);
+        printf("\n");
+       
+        return byte;   
          
     }
      
@@ -46,20 +96,20 @@ void toggle_nth_bit(unsigned char byte,unsigned int n,unsigned int bitval)
 int main()
 {
    
-    unsigned char c='C';//11000010 in binary
+    unsigned char c='C';    
     printf("\n In main before setting or clearing c=");
     print_bits(c);
-    
-    
-    toggle_nth_bit(c,0,0);
-    toggle_nth_bit(c,1,1);
-    toggle_nth_bit(c,2,0);
-    toggle_nth_bit(c,3,0);
-    toggle_nth_bit(c,4,0);
-    toggle_nth_bit(c,5,0);
-    toggle_nth_bit(c,6,1);
-    toggle_nth_bit(c,7,1);
-    
-    //After this I expect the result to be 01000011 in binary, but it isn't
+    unsigned char arr[8]={5,7,1,3,4,2,0,6};
+
+    unsigned char temp=c;
+    for(unsigned char i=0;i<8;++i){
+    unsigned char arr_val=arr[i];    
+    unsigned char x=get_nth_bit(temp,arr_val); 
+    //printf("\n arr_val= %d\t x = %d\t i = %d\t",arr_val,x,i);
+   
+    c=toggle_nth_bit(c,i,x);
+    }
+    printf("\n");
+    print_bits(c);
     return 0;
 }
