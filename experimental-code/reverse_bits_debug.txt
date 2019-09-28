@@ -1,0 +1,14 @@
+I am trying to rearrange the order of bits in a byte(by that I mean if say byte=0011b then rearrange should be anything, say 1010b if the order specified is {3,1,2,0}). My code is working but I can't understand one aspect of it. In the for loop in main, x is the nth bit value that I want to set/clear. I did the same thing with a in the toggle_nth_bit() function. I expect bitval(local variable in toggle_nth_bit) and a to be the same. But this isn't so. The problem is, when I set bitval to a, my code doesn't work. So, I tried to compare x, bitval and a values for each iteration by debugging using gdb as printf didn't seem to be reliable, and what i noticed was this:
+
+a   i  arr_val   x bitval  
+0   0  5         0 0
+0   1  7         0 0
+0   2  1         1 1
+0   3  3         0 0
+0   4  4         0 0
+0   5  2         0 0
+0   6  0         1 1
+0   7  6         1 1
+
+I am doing this to learn how to rearrange bits in a byte in any order.
+The reason why I have the if(!a) condition is that, if there is a positive bit, then that bit doesn't need to be set. This was an ineffficiency, and I figured out that just doing if(!bitval) and removing that if(!a) condition would do, but my code stops working even then. What should I do ?

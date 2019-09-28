@@ -1,0 +1,18 @@
+In main before setting or clearing c=1100001000000000
+ arr_val= 15	 a = 0	 i = 0	 j = 0	 bit_no= 7	 byte_no = 1	
+ arr_val= 14	 a = 0	 i = 0	 j = 1	 bit_no= 6	 byte_no = 1	
+ arr_val= 13	 a = 0	 i = 0	 j = 2	 bit_no= 5	 byte_no = 1	
+ arr_val= 12	 a = 0	 i = 0	 j = 3	 bit_no= 4	 byte_no = 1	
+ arr_val= 11	 a = 0	 i = 0	 j = 4	 bit_no= 3	 byte_no = 1	
+ arr_val= 10	 a = 0	 i = 0	 j = 5	 bit_no= 2	 byte_no = 1	
+ arr_val= 9	     a = 0	 i = 0	 j = 6	 bit_no= 1	 byte_no = 1	
+ arr_val= 8	     a = 0	 i = 0	 j = 7	 bit_no= 0	 byte_no = 1	
+ arr_val= 7	     a = 0	 i = 1	 j = 0	 bit_no= 7	 byte_no = 0	
+ arr_val= 6	     a = 1	 i = 1	 j = 1	 bit_no= 6	 byte_no = 0	
+ arr_val= 5	     a = 0	 i = 1	 j = 2	 bit_no= 5	 byte_no = 0	
+ arr_val= 4	     a = 0	 i = 1	 j = 3	 bit_no= 4	 byte_no = 0	
+ arr_val= 3	     a = 0	 i = 1	 j = 4	 bit_no= 3	 byte_no = 0	
+ arr_val= 2	     a = 0	 i = 1	 j = 5	 bit_no= 2	 byte_no = 0	
+ arr_val= 1	     a = 1	 i = 1	 j = 6	 bit_no= 1	 byte_no = 0	
+ arr_val= 0	     a = 1	 i = 1	 j = 7	 bit_no= 0	 byte_no = 0	
+1100001000000000

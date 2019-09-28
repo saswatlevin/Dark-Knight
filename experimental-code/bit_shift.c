@@ -22,8 +22,8 @@ int main()
 		for(int i=0, selector=1; i<8; i++, selector<<=1)
 		{
 			char bitval = selector & inbyte[cursor];
-			//prcharf("Loop %c: Selector = %c | outbyte = %c | bitval = ",i,selector,outbyte);
-			//prcharByte(bitval);
+			//printf("Loop %c: Selector = %c | outbyte = %c | bitval = ",i,selector,outbyte);
+			//printByte(bitval);
 			if(bitval==selector)
 				outbyte[cursor] |= 1<<shift[i];
 		}
@@ -34,6 +34,6 @@ int main()
 	outbyte[cursor] = '\0';
 	//printByte(inbyte);
 	//printByte(outbyte);
-	printf("%s\n%s",inbyte,outbyte);
+	//printf("%s\n%s",inbyte,outbyte);
 	return 0;
 }

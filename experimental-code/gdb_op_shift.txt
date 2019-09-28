@@ -1,0 +1,163 @@
+Breakpoint 2, toggle_nth_bit (byte=255 '\377', n=0 '\000', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) print bitval
+$1 = 0 '\000'
+(gdb) c
+Continuing.
+ arr_val= 15	 a = 0	 i = 0	 j = 0	 bit_no= 7	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=254 '\376', n=1 '\001', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) print bitval
+$2 = 0 '\000'
+(gdb) c
+Continuing.
+ arr_val= 14	 a = 0	 i = 0	 j = 1	 bit_no= 6	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=252 '\374', n=2 '\002', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 13	 a = 0	 i = 0	 j = 2	 bit_no= 5	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=248 '\370', n=3 '\003', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 12	 a = 0	 i = 0	 j = 3	 bit_no= 4	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=240 '\360', n=4 '\004', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 11	 a = 0	 i = 0	 j = 4	 bit_no= 3	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=224 '\340', n=5 '\005', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 10	 a = 0	 i = 0	 j = 5	 bit_no= 2	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=192 '\300', n=6 '\006', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 9	 a = 0	 i = 0	 j = 6	 bit_no= 1	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=128 '\200', n=7 '\a', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 8	 a = 0	 i = 0	 j = 7	 bit_no= 0	 byte_no = 1	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=0 '\000', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 7	 a = 0	 i = 1	 j = 0	 bit_no= 7	 byte_no = 0	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=1 '\001', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) cc
+Undefined command: "cc".  Try "help".
+(gdb) c
+Continuing.
+ arr_val= 6	 a = 0	 i = 1	 j = 1	 bit_no= 6	 byte_no = 0	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=2 '\002', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 5	 a = 0	 i = 1	 j = 2	 bit_no= 5	 byte_no = 0	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=3 '\003', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 4	 a = 0	 i = 1	 j = 3	 bit_no= 4	 byte_no = 0	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=4 '\004', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 3	 a = 0	 i = 1	 j = 4	 bit_no= 3	 byte_no = 0	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=5 '\005', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 2	 a = 0	 i = 1	 j = 5	 bit_no= 2	 byte_no = 0	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=6 '\006', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 1	 a = 0	 i = 1	 j = 6	 bit_no= 1	 byte_no = 0	
+
+ a bits=00000000
+
+
+Breakpoint 2, toggle_nth_bit (byte=0 '\000', n=7 '\a', bitval=0 '\000')
+    at shift.c:85
+85	        unsigned char x=~(1<<n);
+(gdb) c
+Continuing.
+ arr_val= 0	 a = 0	 i = 1	 j = 7	 bit_no= 0	 byte_no = 0	0000000000000000[Inferior 1 (process 13095) exited normally]
+(gdb) quit

@@ -2,7 +2,7 @@
 
 void print_bits(char byte)
 {
-	for(int i=0;i<=7;++i)
+	for(char i=7;i>=0;--i)
 	{   //Doubtful how this works
 		printf("%c",(byte &(1<<i)) ? '1':'0');
 	}
@@ -10,8 +10,8 @@ void print_bits(char byte)
 
 int main()
 {
-	unsigned char c='C',d='C';
-	unsigned int n;
+	char c='C',d='C';
+	char n;
 	printf("\nC=");
 	print_bits(c);
 	//printf("\nD=");
